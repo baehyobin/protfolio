@@ -12,3 +12,112 @@
     font-weight: normal;
     font-display: swap;
 }
+/* 헤더 */
+header {
+    width: 100%; height: 60px; background-color: rgba(107,152,113,0.4);
+    display: flex; flex-flow: row nowrap; justify-content: space-between; align-items: center;
+    padding: 0 50px; position: fixed; z-index: 999;
+}
+header:hover {
+    background-color: #fff;
+}
+header:hover > a,
+header:hover nav .active {background-color: #81B988; color: #fff;}
+header nav {display: flex; gap: 50px;}
+header > a,
+header nav a {padding: 10px 30px; border-radius: 50px;}
+header > a, 
+header nav .active{background-color: #fff;}
+
+/* --------------------1pg-----------------------1pg */
+#home {
+    width: 100%; height: 100vh;
+    background: url(../images/pg001.png) no-repeat ;
+    background-size:100%; padding: 120px;
+    position: relative;
+}
+#home .home_icons {
+    width: 100%;
+    display: flex; flex-flow: column nowrap; gap: 30px;
+    align-items: end; 
+}
+#home .home_icons li {display: flex; gap: 15px; align-items: center;}
+#home .home_icons li p {color: #fff;}
+#home .home_icons li span {}
+#home .home_icons li span img {}
+#home .title {position: absolute; bottom: 120px; left: 120px;}
+#home .title p {font-size: 1.5rem; margin: 0 0 10px;}
+#home .title p em {font-weight: 500;}
+#home .title h1 {font-family: 'HsBombaram21'; font-size: 8.125rem;}
+/* --------------------2pg-----------------------2pg */
+#profile {
+    width: 100%; height: 100vh;
+    background: url(../images/pg002.png) no-repeat ;
+    background-size:100%; padding: 100px 120px;
+    display: flex; gap: 130px; justify-content: center; align-items: center;
+}
+#profile .left_info{
+    background-color: #fff; width: 380px; height: 600px; border-radius: 30px;
+    display: flex; flex-flow: column nowrap; gap: 15px; justify-content: center; align-items: center;
+}
+#profile .left_info h2 {font-family: 'Rebecca'; font-size: 1.563rem;}
+#profile .left_info p {}
+#profile .left_info span {}
+#profile .right_info {
+    background-color: #fff; width: 1110px; height: 750px; border-radius: 30px;
+    padding: 30px 60px; display: flex; flex-flow: row wrap; justify-content: space-around; gap: 60px;
+}
+#profile .right_info .profile_detail {
+    background-color: rgba(107,152,113,0.4); padding: 30px; border-radius: 20px;
+    display: flex; flex-flow: column nowrap; gap: 15px;
+}
+#profile .right_info .profile_detail h3 {font-weight: 600; font-size: 1.563rem;}
+#profile .right_info .profile_detail p {display: flex; justify-content: space-between; font-size: 0.938rem;}
+#profile .right_info .education {width: 490px;}
+#profile .right_info .license {width: 440px;}
+#profile .right_info .sub_profile {width: 350px;}
+#profile .right_info .skill {width: 580px;}
+#profile .right_info .skill .skill_info {display: flex; flex-flow: column nowrap; gap: 15px;}
+#profile .right_info .skill .skill_info > li {position: relative; display: flex; flex-flow: row nowrap; gap: 15px; align-items: center;}
+#profile .right_info .skill .skill_info li :last-child {position: absolute; top: 13px; left: 49px;}
+
+/* --------------------3pg-----------------------3pg */
+#web_project {
+    display: flex; gap: 80px; align-items: center; justify-content: center;
+    width: 100%; height: 100vh; position: relative;
+    background: url(../images/pg003.png) no-repeat ;
+    background-size:100%; padding: 0 120px; overflow: hidden;
+}
+#web_project .left_web {display: flex; flex-flow: column nowrap; gap: 50px;}
+#web_project .left_web h2 {font-size: 1.875rem; font-weight: 500;}
+#web_project .left_web p {text-align: center;}
+#web_project .main_web {}
+#web_project .main_web .swiper {}
+#web_project .main_web .lenox_swiper {}
+#web_project .main_web .fender_swiper {}
+#web_project .main_web .himart_swiper {}
+#web_project .right_web {display: flex; flex-flow: column nowrap; gap: 100px;}
+#web_project .right_web a {display: inline-block; border-bottom: 1px solid #E0EAC8; padding-bottom: 3px; transition: all 0.5s ease;}
+#web_project .right_web a:hover {border-bottom-color: #000;}
+/* --------------------3pg-----------------------3pg */
+#other_project {}
+#other_project .left_btn {}
+#other_project .left_btn button {}
+#other_project .left_btn button span {}
+#other_project .left_btn button span img {}
+#other_project .left_btn button p {}
+#other_project .left_btn .detail_pg {}
+#other_project .left_btn .bnr_pg {}
+#other_project .right_gallery {}
+#other_project .right_gallery .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.4s ease;}
+
+.gallery.show {
+    opacity: 1;
+}

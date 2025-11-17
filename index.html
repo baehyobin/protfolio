@@ -11,6 +11,9 @@
     <!--swiper-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- 글꼴 -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <!-- design -->
@@ -35,6 +38,10 @@
         <!-- 1page-Home -->
         <div id="home">
             <ul class="home_icons">
+                <li>
+                    <p>기획</p>
+                    <span><img src="./images/blub.svg" alt="#"></span>
+            </li>
                 <li>
                     <p>Figma</p>
                     <span><img src="./images/figma.svg" alt="#"></span>
@@ -62,7 +69,7 @@
         </ul>
         <!-- 메인 문구 -->
             <div class="title">
-                <p>끊임없이 <em>소통하는</em> 기획자</p>
+                <p>끊임없이 <em>소통하는</em> 디자이너</p>
                 <h1>Portfolio</h1>
             </div>
         </div>
@@ -72,7 +79,7 @@
             <div class="left_info">
                 <h2>Bae hyobin</h2>
                 <p>1999.08.24</p>
-                <span><img src="#" alt="프로필사진"></span>
+                <span><img src="./images/profilepicture.png" alt="프로필사진"></span>
                 <p>contact</p>
                 <p>hyobin9824@gmail.com</p>
                 <p>010-9288-9172</p>
@@ -101,17 +108,121 @@
                 <li class="profile_detail skill">
                     <h3>Skill</h3>
                     <ul class="skill_info">
-                        <li><img src="./images/figma.svg" alt="피그마"><img src="" alt=""></li>
-                        <li><img src="./images/photoshop.svg" alt="포토샵"><img src="" alt=""></li>
-                        <li><img src="./images/illust.svg" alt="일러스트레이터"><img src="" alt=""></li>
-                        <li><img src="./images/html.svg" alt="html"><img src="" alt=""></li>
-                        <li><img src="./images/css.svg" alt="css"><img src="" alt=""></li>
-                        <li><img src="./images/js.svg" alt="javascript"><img src="" alt=""></li>
+                        <li>
+                            <img src="./images/blub.svg" alt="기획">
+                            <img src="./images/gauge.png" alt="바탕">
+                            <img src="./images/gauge001.png" alt="기획게이지">
+                        </li>
+                        <li>
+                            <img src="./images/figma.svg" alt="피그마">
+                            <img src="./images/gauge.png" alt="바탕">
+                            <img src="./images/gauge002.png" alt="피그마게이지">
+                        </li>
+                        <li>
+                            <img src="./images/photoshop.svg" alt="포토샵">
+                            <img class="base" src="./images/gauge.png" alt="바탕">
+                            <img src="./images/gauge003.png" alt="포토샵게이지">
+                        </li>
+                        <li>
+                            <img src="./images/illust.svg" alt="일러스트레이터">
+                            <img src="./images/gauge.png" alt="바탕">
+                            <img src="./images/gauge004.png" alt="일러스트레이터게이지">
+                        </li>
+                        <li>
+                            <img src="./images/html.svg" alt="html">
+                            <img class="base" src="./images/gauge.png" alt="바탕">
+                            <img src="./images/gauge005.png" alt="html게이지">
+                        </li>
+                        <li>
+                            <img src="./images/css.svg" alt="css">
+                            <img src="./images/gauge.png" alt="바탕">
+                            <img src="./images/gauge006.png" alt="css게이지">
+                        </li>
+                        <li>
+                            <img src="./images/js.svg" alt="javascript">
+                            <img src="./images/gauge.png" alt="바탕">
+                            <img src="./images/gauge007.png" alt="자바스크립트게이지">
+                        </li>
                     </ul>
                 </li>
             </ul>
         </div>
         <!-- 3페이지 -->
+        <div id="web_project">
+            <div class="left_web">
+                <h2>Introduce my works</h2>
+                <p>편의성에 중심을 두어<br>사용자를 생각한 디자인을 하고있습니다.</p>
+            </div>
+            <div class="main_web">
+                <div class="swiper lenox_swiper">
+                    <div class="swiper-wrapper lenox_pg">
+                        <div class="swiper-slide">slide1</div>
+                        <div class="swiper-slide">slide2</div>
+                        <div class="swiper-slide">slide3</div>
+                    </div>
+                </div>
+                <div class="swiper fender_swiper">
+                    <div class="swiper-wrapper fender_pg">
+                        <div class="swiper-slide">slide1</div>
+                        <div class="swiper-slide">slide2</div>
+                        <div class="swiper-slide">slide3</div>
+                    </div>
+                </div>
+                <div class="swiper himart_swiper">
+                    <div class="swiper-wrapper himart_pg">
+                        <div class="swiper-slide">slide1</div>
+                        <div class="swiper-slide">slide2</div>
+                        <div class="swiper-slide">slide3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_web">
+                <a href="https://www.figma.com/proto/DhYbfL5jS7Gs55vwM2YlhV/%EA%B8%B0%ED%9A%8D%EC%84%9C?page-id=205%3A2&node-id=205-4&viewport=362%2C303%2C0.27&t=zHSPQPqNoD5GuCah-1&scaling=contain&content-scaling=fixed" target="_blank" id="lenox">Lenox ReDesign</a>
+                <a href="https://www.figma.com/proto/DhYbfL5jS7Gs55vwM2YlhV/%EA%B8%B0%ED%9A%8D%EC%84%9C?page-id=282%3A46&node-id=288-244&p=f&viewport=-307%2C254%2C0.34&t=OngrQNQvEf93zwwP-1&scaling=contain&content-scaling=fixed" target="_blank" id="fender">Fender ReDesign</a>
+                <a href="https://www.figma.com/proto/DhYbfL5jS7Gs55vwM2YlhV/%EA%B8%B0%ED%9A%8D%EC%84%9C?page-id=0%3A1&node-id=1-2&p=f&viewport=1283%2C417%2C0.31&t=lZ86OGPfVy1lAxDN-1&scaling=contain&content-scaling=fixed" target="_blank" id="himart">Himart ReDesign</a>
+            </div>
+        </div>
+        <!-- 4페이지 -->
+        <div id="other_project">
+            <div class="left_btn">
+                <button type="button" class="detail_pg">
+                    <span><img src="./images/star_before.svg" alt="상세페이지"></span>
+                    <p>상세페이지</p>
+                </button>
+                <button type="button" class="bnr_pg">
+                    <span><img src="./images/star_before.svg" alt="상세페이지"></span>
+                    <p>배너디자인</p>
+                </button>
+            </div>
+            <div class="right_gallery">
+                <div class="gallery detail_gallery">
+                    <div class="thumnail_wrapper"><img src="./images/detail/apple.png" alt="사과"></div>
+                    <div class="thumnail_wrapper"><img src="./images/detail/milk.jpg" alt="우유"></div>
+                </div>
+                <div class="gallery bnr_gallery">
+                    <div class="thumnail_wrapper"><img src="./images/banner/banchan.jpg" alt="반찬"></div>
+                    <div class="thumnail_wrapper"><img src="./images/banner/bnr_himart001.png" alt="하이마트1"></div>
+                    <div class="thumnail_wrapper"><img src="./images/banner/bnr_himart002.png" alt="하이마트2"></div>
+                    <div class="thumnail_wrapper"><img src="./images/banner/bnr_himart003.png" alt="하이마트3"></div>
+                    <div class="thumnail_wrapper"><img src="./images/banner/bnr_lenox001.png" alt="레녹스1"></div>
+                    <div class="thumnail_wrapper"><img src="./images/banner/bnr_lenox002.png" alt="레녹스2"></div>
+                    <div class="thumnail_wrapper"><img src="./images/banner/bnr_lush.jpg" alt="러쉬"></div>
+                    <div class="thumnail_wrapper"><img src="./images/banner/bnr_serum.jpg" alt="세럼"></div>
+                    <div class="thumnail_wrapper"><img src="./images/banner/bottega.jpg" alt="보테가"></div>
+                    <div class="thumnail_wrapper"><img src="./images/banner/skin.jpg" alt="피부과"></div>
+                    <div class="thumnail_wrapper"><img src="./images/banner/thom001.jpg" alt="톰브라운1"></div>
+                    <div class="thumnail_wrapper"><img src="./images/banner/thom002.jpg" alt="톰브라운2"></div>
+                    <div class="thumnail_wrapper"><img src="./images/banner/travel.jpg" alt="여행"></div>
+                </div>
+            </div>
+            <div class="modal" id="imageModal">
+                <img id="modalImage" src="" alt="크게보기" />
+            </div>
+        </div>
+        <!-- 5페이지 -->
+        <div id="last_pg">
+            <p>Thank you!</p>
+        </div>
     </main>
 </body>
 </html>
