@@ -1,3 +1,5 @@
+/* 부드러운스크롤 */
+html {scroll-behavior: smooth;}
 /* 봄바람체 */
 @font-face {
     font-family: 'HsBombaram21';
@@ -12,6 +14,10 @@
     font-weight: normal;
     font-display: swap;
 }
+/* 메인 */
+main {width: 1920px; height: auto;}
+#page_wrap {}
+#page_wrap .swiper-slide {width: 100%; height: 100vh;}
 /* 헤더 */
 header {
     width: 100%; height: 60px; background-color: rgba(107,152,113,0.4);
@@ -21,9 +27,10 @@ header {
 header:hover {
     background-color: #fff;
 }
-header:hover > a,
+header:hover > a {background-color: #81B988; color: #fff; }
 header:hover nav .active {background-color: #81B988; color: #fff;}
-header nav {display: flex; gap: 50px;}
+header nav {display: flex; gap: 50px; }
+header:hover nav a {transition: all 0.4s ease;}
 header > a,
 header nav a {padding: 10px 30px; border-radius: 50px;}
 header > a, 
@@ -91,33 +98,85 @@ header nav .active{background-color: #fff;}
 #web_project .left_web {display: flex; flex-flow: column nowrap; gap: 50px;}
 #web_project .left_web h2 {font-size: 1.875rem; font-weight: 500;}
 #web_project .left_web p {text-align: center;}
-#web_project .main_web {}
-#web_project .main_web .swiper {}
-#web_project .main_web .lenox_swiper {}
+#web_project .main_web {
+    width: 500px; height: 100vh; position: relative;
+    transition: display 2s ease;}
+#web_project .main_web .swiper {opacity: 0; position: absolute; top: 0; right: 0;}
+#web_project .main_web .swiper .swiper-wrapper {height:100vh;}
+#web_project .main_web .swiper .swiper-wrapper .swiper-slide {}
+#web_project .main_web .lenox_swiper {opacity: 1;}
 #web_project .main_web .fender_swiper {}
 #web_project .main_web .himart_swiper {}
 #web_project .right_web {display: flex; flex-flow: column nowrap; gap: 100px;}
 #web_project .right_web a {display: inline-block; border-bottom: 1px solid #E0EAC8; padding-bottom: 3px; transition: all 0.5s ease;}
 #web_project .right_web a:hover {border-bottom-color: #000;}
-/* --------------------3pg-----------------------3pg */
-#other_project {}
-#other_project .left_btn {}
-#other_project .left_btn button {}
-#other_project .left_btn button span {}
-#other_project .left_btn button span img {}
-#other_project .left_btn button p {}
+/* --------------------4pg-----------------------4pg */
+#other_project {
+    width: 100%; height: 100vh;
+    background: url(../images/pg004.png) no-repeat ;
+    background-size:100%; padding: 120px;
+    position: relative; overflow: hidden;
+    display: flex; flex-flow: row nowrap; gap: 750px; text-align: center;
+}
+#other_project .left_btn {
+    display: flex; flex-flow: column nowrap; gap: 180px;
+    justify-content: center; height: 100%;
+}
+#other_project .left_btn button {width: fit-content;}
+#other_project .left_btn button:hover {background: url(../images/star_after.svg) no-repeat; background-size: contain;}
+#other_project .left_btn button{
+    background: url(../images/star_before.svg) no-repeat; background-size: contain;
+    transition: 0.3s ease;
+}
+#other_project .left_btn button p {
+    transform: translate(25px, 2px);
+}
 #other_project .left_btn .detail_pg {}
 #other_project .left_btn .bnr_pg {}
 #other_project .right_gallery {}
 #other_project .right_gallery .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    max-width: 1200px;
-    margin: 0 auto;
-    opacity: 0;
-    transition: opacity 0.4s ease;}
-
-.gallery.show {
-    opacity: 1;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 10px; max-width: 900px;
+    position: absolute; top:257px;
+    transition: opacity 0.4s ease; display: none;
 }
+
+
+#other_project .right_gallery .gallery .thumnail_wrapper {
+    position: relative; border-radius: 8px; overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#other_project .right_gallery .gallery .thumnail_wrapper img {
+    width: 120px; height: 120px; object-fit: cover;
+    cursor: pointer; transition: transform 0.2s; display: block;
+}
+#other_project .right_gallery .gallery .thumnail_wrapper img:hover {
+    transform: scale(1.03);
+}
+#other_project #popup_bg {
+    width: 100%; height: 100%; top: 0; left: 0;
+    justify-content: center;  align-items: center;
+    display: none; position: fixed; z-index: 990;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+#other_project #popup_bg #popup {
+    max-width: 90vw; max-height: 90vh;
+    overflow-y: auto;  position: relative; 
+}
+#popup img {
+    width: auto; height: auto;
+    display: block; 
+}
+/* --------------------5pg-----------------------5pg */
+#last_pg {
+    width: 100%; height: 100vh;
+    background-color: #81B988;
+    position: relative; overflow: hidden;
+    position: relative;
+}
+
+    #last_pg p {font-family: 'Rebecca';}
+    #last_pg p:nth-child(1) {font-size: 200pt; color: #E0EAC8; position: absolute; top: 0; left: -50px;}
+    #last_pg p:nth-child(2) {font-size: 100pt; color: #A9E2B0; position: absolute; top: 35%; left: 40%;}
+    #last_pg p:nth-child(3) {font-size: 100pt; color: #E0EAC8; position: absolute; top: 55%; right: 40%;}
+    #last_pg p:nth-child(4) {font-size: 160pt; color: #E0EAC8; position: absolute; bottom: -20px; right: 0;}
